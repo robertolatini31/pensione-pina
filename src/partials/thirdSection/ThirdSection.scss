@@ -20,7 +20,18 @@
     justify-content: flex-end;
   }
 
-  @media (max-width: 768px) {
+  .wow-img {
+    opacity: 0;
+    transform: translateX(-100%); /* DA SINISTRA */
+    transition: all 0.9s ease-out;
+  }
+
+  .wow-img.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media (max-width: 989px) {
     .links-wrapper {
       justify-content: center;
     }

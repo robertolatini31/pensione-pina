@@ -1,12 +1,41 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./ThirdSection.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Champagne from "../../assets/Champagne.webp";
 
 const ThirdSection = () => {
+  const sectionRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setVisible(true);
+        }
+      },
+      {
+        threshold: 0.7,
+      }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="third-section-container section">
-      <img className="wow-img avatar-pina" src={Champagne} />
+    <div
+      id="third-section"
+      ref={sectionRef}
+      className="third-section-container section"
+    >
+      <img
+        className={`wow-img avatar-pina ${visible ? "visible" : ""}`}
+        src={Champagne}
+      />
+
       <div className="wrapper-text">
         <p className="text">
           Per festeggiare ho pensato di organizzare una festa di pensionamento
@@ -30,7 +59,10 @@ const ThirdSection = () => {
           </a>
         </div>
       </div>
-      <FontAwesomeIcon icon="fa-solid fa-arrow-down" />
+
+      <a className="link" href="#form-section">
+        <FontAwesomeIcon icon="fa-solid fa-arrow-down" />
+      </a>
     </div>
   );
 };

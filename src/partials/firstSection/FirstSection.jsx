@@ -5,7 +5,7 @@ import woohoo from "../../assets/woohoo.webp";
 
 const FirstSection = () => {
   return (
-    <div className="first-section-container section">
+    <div id="first-section" className="first-section-container section">
       <div className="text-wrapper">
         <h2 className="subtitle">
           Cari colleghi, la tanto attesa chiamata è arrivata!
@@ -13,7 +13,9 @@ const FirstSection = () => {
         <h1 className="title">Vado in pensione!</h1>
       </div>
       <img className="wow-img avatar-pina" src={woohoo} />
-      <FontAwesomeIcon icon="fa-solid fa-arrow-down" />
+      <a className="link" href="#second-section">
+        <FontAwesomeIcon icon="fa-solid fa-arrow-down" />
+      </a>
     </div>
   );
 };

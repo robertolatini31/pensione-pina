@@ -66,7 +66,7 @@ const FormSection = () => {
 
   return (
     <Loader isLoading={isSubmitting}>
-      <div className="form-section section">
+      <div id="form-section" className="form-section section">
         <div className="text-wrapper text">
           <p className="text">
             Per favore dammi conferma entro il 30/12 compilando i campi qui

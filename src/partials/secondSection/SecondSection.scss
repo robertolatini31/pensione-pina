@@ -11,4 +11,14 @@
   .text-wrapper {
     gap: 15px;
   }
+  .wow-img {
+    opacity: 0;
+    transform: translateX(+100%);
+    transition: all 0.9s ease-out;
+  }
+
+  .wow-img.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
