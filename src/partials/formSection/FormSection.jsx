@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./FormSection.scss";
 import Loader from "../../components/loader/Loader";
 import MessageBox from "../../components/messageBox/MessageBox";
+import okay from "../../assets/okay.webp";
 
 const FormSection = () => {
   const [formData, setFormData] = useState({
@@ -45,7 +46,15 @@ const FormSection = () => {
       const result = await response.json();
 
       if (result.status === "OK") {
-        setMessage({ type: "success", text: "Grazie per la conferma!" });
+        setMessage({
+          type: "success",
+          text: (
+            <div className="success-message">
+              <img src={okay} className="avatar-pina" />
+              Grazie {formData.nome} per la tua risposta! Ci vediamo alla festa!
+            </div>
+          ),
+        });
         setFormData({ nome: "", cognome: "", presenza: null });
       } else {
         setMessage({ type: "error", text: result.message });

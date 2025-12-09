@@ -22,6 +22,18 @@
     gap: 15px;
   }
 
+  .success-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    .avatar-pina {
+      height: 100px;
+    }
+  }
+
   input[type="text"] {
     width: 300px;
     max-width: 100%;
