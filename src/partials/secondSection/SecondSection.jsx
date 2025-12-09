@@ -1,6 +1,7 @@
 import React from "react";
 import "./SecondSection.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import thankyou from "../../assets/thankyou.webp";
 
 const SecondSection = () => {
   return (
@@ -10,7 +11,7 @@ const SecondSection = () => {
         Grazie di aver fatto parte di questo viaggio, grazie di ogni parola
         gentile, per l'aiuto, per la pazienza e per le pause caffè.
       </div>
-      <img className="wow-img avatar-pina" src="/assets/thankyou.webp" />
+      <img className="wow-img avatar-pina" src={thankyou} />
       <FontAwesomeIcon icon="fa-solid fa-arrow-down" />
     </div>
   );

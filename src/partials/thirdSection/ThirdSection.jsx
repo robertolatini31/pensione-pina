@@ -1,11 +1,12 @@
 import React from "react";
 import "./ThirdSection.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Champagne from "../../assets/Champagne.webp";
 
 const ThirdSection = () => {
   return (
     <div className="third-section-container section">
-      <img className="wow-img avatar-pina" src="/assets/Champagne.webp" />
+      <img className="wow-img avatar-pina" src={Champagne} />
       <div className="wrapper-text">
         <p className="text">
           Per festeggiare ho pensato di organizzare una festa di pensionamento

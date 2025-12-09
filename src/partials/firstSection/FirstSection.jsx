@@ -1,6 +1,7 @@
 import React from "react";
 import "./FirstSection.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import woohoo from "../../assets/woohoo.webp";
 
 const FirstSection = () => {
   return (
@@ -11,7 +12,7 @@ const FirstSection = () => {
         </h2>
         <h1 className="title">Vado in pensione!</h1>
       </div>
-      <img className="wow-img avatar-pina" src="/assets/woohoo.webp" />
+      <img className="wow-img avatar-pina" src={woohoo} />
       <FontAwesomeIcon icon="fa-solid fa-arrow-down" />
     </div>
   );
