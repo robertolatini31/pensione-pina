@@ -1,0 +1,28 @@
+.third-section-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  .text {
+    max-width: 450px;
+  }
+  .wrapper-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .links-wrapper {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  @media (max-width: 768px) {
+    .links-wrapper {
+      justify-content: center;
+    }
+  }
+}

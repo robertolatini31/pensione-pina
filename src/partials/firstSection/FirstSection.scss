@@ -1,0 +1,27 @@
+.first-section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .text-wrapper {
+    text-align: center;
+  }
+
+  .wow-img {
+    animation: slideInFromTop 1s ease-out;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
