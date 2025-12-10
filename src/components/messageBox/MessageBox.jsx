@@ -1,14 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./MessageBox.scss";
+import useLockBodyScroll from "../../hooks/useLockBodyScroll";
 
 const MessageBox = ({ type, message }) => {
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
+  useLockBodyScroll(true);
 
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, []);
   return (
     <div className="message-box-overlay">
       <div className={`message-box ${type}`}>{message}</div>;
