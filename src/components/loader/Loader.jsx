@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Loader.scss";
-import useLockBodyScroll from "../../hooks/useLockBodyScroll";
 
 const Loader = ({ isLoading, children }) => {
-  useLockBodyScroll(isLoading);
+  useEffect(() => {
+    if (isLoading) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isLoading]);
 
   return (
     <div className="loader-container">

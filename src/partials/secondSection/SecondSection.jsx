@@ -37,8 +37,8 @@ const SecondSection = () => {
     >
       <div className="text-wrapper text">
         <h2 className="subtitle">Il lavoro finisce, ma l'amicizia resta.</h2>
-        Grazie di aver fatto parte di questo viaggio, grazie di ogni parola
-        gentile, per l'aiuto, per la pazienza e per le pause caffè.
+        Grazie di aver fatto parte di questo viaggio, di ogni parola gentile,
+        per l'aiuto, per la pazienza e per le pause caffè.
       </div>
 
       <img
