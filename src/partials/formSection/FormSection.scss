@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: #fff;
 
   .text {
     max-width: 450px;
@@ -30,7 +31,7 @@
     gap: 15px;
 
     .avatar-pina {
-      height: 100px;
+      height: 200px;
     }
   }
 
@@ -62,7 +63,7 @@
     }
   }
 
-  button {
+  button:not(.cta) {
     padding: 10px 20px;
     background-color: rgb(33, 191, 96);
     color: #fff;

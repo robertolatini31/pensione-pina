@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./FormSection.scss";
 import Loader from "../../components/loader/Loader";
 import MessageBox from "../../components/messageBox/MessageBox";
-import okay from "../../assets/okay.webp";
+import giantheart from "../../assets/giantheart.webp";
+import promemoria from "../../assets/pensione-pina.png";
 
 const FormSection = () => {
   const [formData, setFormData] = useState({
@@ -30,6 +31,15 @@ const FormSection = () => {
     }));
   };
 
+  const handleDownload = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const link = document.createElement("a");
+    link.href = promemoria; // URL statico generato da Vite
+    link.download = "pensione-pina.png";
+    link.click();
+  };
+
   const handleSubmit = async () => {
     setIsSubmitting(true);
 
@@ -50,8 +60,28 @@ const FormSection = () => {
           type: "success",
           text: (
             <div className="success-message">
-              <img src={okay} className="avatar-pina" />
-              Grazie {formData.nome} per la tua risposta! Ci vediamo alla festa!
+              <img src={giantheart} className="avatar-pina" />
+              {formData.presenza ? (
+                <div>
+                  <p>{`Grazie ${formData.nome} per la conferma!`}</p>
+                  <p>Sarà un piacere festeggiare insieme.</p>
+                </div>
+              ) : (
+                <div>
+                  <p>{`Grazie ${formData.nome} per aver avvisato!`}</p>
+                  <p>
+                    Peccato che non potrai esserci, sarebbe stato bello
+                    festeggiare insieme.
+                  </p>
+                  <p>Alla prossima occasione!</p>
+                </div>
+              )}
+
+              {formData.presenza && (
+                <button onClick={handleDownload} className="cta">
+                  Scarica Promemoria
+                </button>
+              )}
             </div>
           ),
         });

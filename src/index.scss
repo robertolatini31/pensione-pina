@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  color: #fff;
 }
 
 html {
@@ -15,7 +16,7 @@ body {
   background: #ffe70d;
   background: linear-gradient(
     30deg,
-    rgba(255, 231, 13, 1) 0%,
+    rgb(255, 231, 13) 0%,
     rgb(33, 191, 96) 50%,
     rgba(255, 231, 13, 1) 100%
   );

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./SecondSection.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import thankyou from "../../assets/thankyou.webp";
+import espressodrink from "../../assets/espressodrink.webp";
 
 const SecondSection = () => {
   const sectionRef = useRef(null);
@@ -43,7 +43,7 @@ const SecondSection = () => {
 
       <img
         className={`wow-img avatar-pina ${visible ? "visible" : ""}`}
-        src={thankyou}
+        src={espressodrink}
       />
 
       <a className="link" href="#third-section">
