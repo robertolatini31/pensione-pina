@@ -1,10 +1,21 @@
 .form-section {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: #fff;
+
+  .wow-img {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.9s ease-out;
+  }
+
+  .wow-img.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   .text {
     max-width: 450px;
@@ -33,6 +44,10 @@
     .avatar-pina {
       height: 200px;
     }
+  }
+
+  .avatar-pina {
+    height: 200px;
   }
 
   input[type="text"] {

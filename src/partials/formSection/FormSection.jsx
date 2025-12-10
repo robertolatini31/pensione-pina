@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./FormSection.scss";
 import Loader from "../../components/loader/Loader";
 import MessageBox from "../../components/messageBox/MessageBox";
 import giantheart from "../../assets/giantheart.webp";
 import promemoria from "../../assets/pensione-pina.png";
+import fingerscrossed from "../../assets/fingerscrossed.webp";
 
 const FormSection = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,27 @@ const FormSection = () => {
     cognome: "",
     presenza: null,
   });
+
+  const sectionRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setVisible(true);
+        }
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState(null);
@@ -87,7 +109,17 @@ const FormSection = () => {
         });
         setFormData({ nome: "", cognome: "", presenza: null });
       } else {
-        setMessage({ type: "error", text: result.message });
+        setMessage({
+          type: "error",
+          text: (
+            <div className="success-message">
+              Qualcosa è andato storto
+              <button onClick={() => setMessage(null)} className="cta">
+                Riprova
+              </button>
+            </div>
+          ),
+        });
       }
     } catch (error) {
       console.error("Errore durante l'invio:", error);
@@ -105,7 +137,11 @@ const FormSection = () => {
 
   return (
     <Loader isLoading={isSubmitting}>
-      <div id="form-section" className="form-section section">
+      <div ref={sectionRef} id="form-section" className="form-section section">
+        <img
+          className={`wow-img avatar-pina ${visible ? "visible" : ""}`}
+          src={fingerscrossed}
+        />
         <div className="text-wrapper text">
           <p className="text">
             Per organizzarmi al meglio, ho bisogno di sapere se ci sarai. Puoi
