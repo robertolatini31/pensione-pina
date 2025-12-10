@@ -113,7 +113,7 @@ const FormSection = () => {
           type: "error",
           text: (
             <div className="success-message">
-              Qualcosa è andato storto
+              Qualcosa è andato storto 😅
               <button onClick={() => setMessage(null)} className="cta">
                 Riprova
               </button>
