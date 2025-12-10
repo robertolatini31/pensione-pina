@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  color: #fff;
 }
 
 html {
@@ -67,6 +66,7 @@ body {
 .cta {
   padding: 10px;
   border: 1px solid rgba(255, 231, 13, 0.8);
+  color: #fff;
   border-radius: 5px;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.2);
@@ -74,6 +74,7 @@ body {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
   width: fit-content;
+  font-size: 16px;
   &:hover {
     background: rgba(255, 255, 255, 0.4);
     box-shadow: 0 0 10px rgba(255, 231, 13, 0.5);
