@@ -70,7 +70,7 @@ const FormSection = () => {
                 <div>
                   <p>{`Grazie ${formData.nome} per aver avvisato!`}</p>
                   <p>
-                    Peccato che non potrai esserci, sarebbe stato bello
+                    Mi dispiace che non potrai esserci, sarebbe stato bello
                     festeggiare insieme.
                   </p>
                   <p>Alla prossima occasione!</p>
@@ -108,8 +108,8 @@ const FormSection = () => {
       <div id="form-section" className="form-section section">
         <div className="text-wrapper text">
           <p className="text">
-            Per favore dammi conferma entro il 30/12 compilando i campi qui
-            sotto:
+            Per organizzarmi al meglio, ho bisogno di sapere se ci sarai. Puoi
+            dirmelo entro il 31/12 compilando il form qui sotto:
           </p>
         </div>
         <div className="input-wrapper">

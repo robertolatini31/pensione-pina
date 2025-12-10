@@ -38,9 +38,10 @@ const ThirdSection = () => {
 
       <div className="wrapper-text">
         <p className="text">
-          Per festeggiare ho pensato di organizzare una festa di pensionamento
-          presso: Trattoria Zi Maria al sasso. Il 09/01/2026 alle ore 19:30. Ci
-          terrei molto alla vostra presenza.
+          Per celebrare questo momento speciale, ho organizzato una piccola
+          festa di pensionamento presso <strong>Trattoria Zi Maria</strong> al
+          Sasso, il <strong>09/01/2026</strong> alle ore <strong>19:30</strong>.
+          Sarebbe davvero bello condividere questa serata con te!
         </p>
         <div className="links-wrapper">
           <a
