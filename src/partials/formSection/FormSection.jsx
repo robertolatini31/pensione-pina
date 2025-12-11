@@ -145,7 +145,7 @@ const FormSection = () => {
         <div className="text-wrapper text">
           <p className="text">
             Per organizzarmi al meglio, ho bisogno di sapere se ci sarai. Puoi
-            dirmelo entro il 31/12 compilando il form qui sotto:
+            dirmelo entro il 30/12 compilando il form qui sotto:
           </p>
         </div>
         <div className="input-wrapper">
